@@ -41,8 +41,7 @@ async def tiktok_post(request: Request, url: str):
             {"error": "The URL provided doesn't appear to be a TikTok post."},
             status_code=400,
         )
-
-    # ensure the URL has the ID in it
+    
     if not any(substring in url for substring in ("video", "photo")):
         response = await services.session.get(url, allow_redirects=True)
         if not response.ok:
