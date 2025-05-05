@@ -92,13 +92,12 @@ class BrowserManager:
         self.playwright = await async_playwright().start()
         try:
             self.browser = await self.playwright.chromium.connect_over_cdp(
-                URL("ws://0.0.0.0:48324/")
+                URL("ws://localhost:48324/")
                 .with_query(
                     {
-                        "token": "Cz54syrdEtqavNCsrWZ9",
+                        "token": "533e2984-d94f-4d14-9164-16af785ef992",
                         "stealth": "true",
                         "blockAds": "true",
-                        "--proxy-server": "socks5://warp:40000",
                     },
                 )
                 .human_repr()

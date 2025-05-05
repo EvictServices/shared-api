@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  chrome:
+    container_name: chrome
+    env_file:
+      - chrome.env
+    image: browserless/chrome:1.60-chrome-stable
+    restart: always
+    ports:
+      - "48324:3000"
+    tmpfs:
+      - /chrome
+      - /tmp
