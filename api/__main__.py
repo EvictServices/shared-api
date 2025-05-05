@@ -98,7 +98,7 @@ if __name__ == "__main__":
         access_log=True,
         reload_includes=["*.py"],
         host=env.get("HOST", "0.0.0.0"),
-        port=env.get("PORT", 1337),  # type: ignore
+        port=env.get("PORT", 1359),  # type: ignore
         log_config={
             "version": 1,
             "disable_existing_loggers": False,

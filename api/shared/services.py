@@ -53,7 +53,7 @@ class Services:
 
     @property
     def base_url(self) -> str:
-        return env.get("BASE_URL", "http://127.0.0.1:1337")
+        return env.get("BASE_URL", "http://127.0.0.1:1359")
 
     @property
     def keys(self) -> dict[str, str]:
